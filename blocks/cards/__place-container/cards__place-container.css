@@ -1,0 +1,8 @@
+.cards__place-container {
+    margin: 0 auto;
+    padding: 0;
+    width: 246px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
