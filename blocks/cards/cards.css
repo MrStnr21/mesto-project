@@ -8,3 +8,10 @@
     row-gap: 20px;
     color: black;
 }
+
+@media screen and (max-width: 1279px) {
+    .cards {
+        margin: 0 auto 48px;
+        max-width: 282px;
+    }
+}

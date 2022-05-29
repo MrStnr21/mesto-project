@@ -4,3 +4,15 @@
     height: 24px;
     border: 1px solid #FFFFFF;
 }
+
+.profile__edit-button:hover {
+    opacity: .6;
+    transition: .2s;
+}
+
+@media screen and (max-width: 1279px) {
+    .profile__edit-button {
+        width: 18px;
+        height: 18px;
+    }
+}

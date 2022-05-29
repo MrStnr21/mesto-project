@@ -5,3 +5,9 @@
     column-gap: 18px;
     align-items: baseline;
 }
+
+@media screen and (max-width: 1279px) {
+    .profile__name-container {
+        column-gap: 10px;
+    }   
+}
