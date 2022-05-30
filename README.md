@@ -20,4 +20,4 @@
   ...Loading...
 - Javascript.
 
-<a href="https://mrstnr21.github.io/mesto-project/">Pages GitHub</a>
+<a href="https://mrstnr21.github.io/mesto-project/" target="_blank">Pages GitHub</a>
