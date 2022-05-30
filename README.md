@@ -1,17 +1,23 @@
-# Проект: Место
+<h1 align="center">Hi there, I'm <a href="https://www.youtube.com/watch?v=xm3YgoEiEDc" target="_blank">Yaroslav</a> 
+<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
+<h3 align="center">Junior Frontend Developer.</h3>
 
-### Обзор
+<h2>Проект: Место</h2>
 
-* Figma
-* Картинки
+Данный проект напоминает Instagram. Социальная сеть для шеринга фотографиями. Здесь вы можете создать свой профиль и вести свою страничку, заполняя ее фотографиями, посвященными интересным местам, следить за страничками других людей, ставить лайки.
 
-**Figma**
+Функционал сайта:
 
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+- создание и редактирование профиля;
+- добавление фотографий;
+- возможность ставить лайки фотографиям.
 
-**Картинки**
+При создании проекта использовались:
 
-Доставать картинки предстоит из Фигмы. Это расхожая практика, поэтому полезно потренироваться.
-Не забудьте [оптимизировать картинки](https://tinypng.com/), чтобы ваш сайт загружался быстрее.
+- адаптивная верстка;
+- Grid Layout;
+- Flex ;
+  ...Loading...
+- Javascript.
 
-Удачи!
+<a href="https://mrstnr21.github.io/mesto-project/">Pages GitHub</a>
