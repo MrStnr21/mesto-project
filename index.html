@@ -30,113 +30,127 @@
                 <button
                   type="button"
                   name="edit"
-                  class="profile__edit-button"
+                  class="profile__button-edit"
                 ></button>
               </div>
               <p class="profile__work">Исследователь океана</p>
             </div>
           </div>
-          <button type="button" name="add" class="profile__add-button"></button>
+          <button type="button" name="add" class="profile__button-add"></button>
         </section>
         <section class="cards">
-          <div class="cards__item">
-            <img
-              src="./images/Karachaevsk.jpg"
-              alt="Карачаевск"
-              class="cards__image"
-            />
-            <div class="cards__place-container">
-              <h2 class="cards__place-text">Карачаевск</h2>
-              <button
-                type="button"
-                name="like"
-                class="cards__button-like"
-              ></button>
-            </div>
-          </div>
-          <div class="cards__item">
-            <img
-              src="./images/elbrus.jpg"
-              alt="Гора Эльбрус"
-              class="cards__image"
-            />
-            <div class="cards__place-container">
-              <h2 class="cards__place-text">Гора Эльбрус</h2>
-              <button
-                type="button"
-                name="like"
-                class="cards__button-like"
-              ></button>
-            </div>
-          </div>
-          <div class="cards__item">
-            <img src="./images/Dombay.jpg" alt="Домбай" class="cards__image" />
-            <div class="cards__place-container">
-              <h2 class="cards__place-text">Домбай</h2>
-              <button
-                type="button"
-                name="like"
-                class="cards__button-like"
-              ></button>
-            </div>
-          </div>
-          <div class="cards__item">
-            <img
-              src="./images/elbrus.jpg"
-              alt="Гора Эльбрус"
-              class="cards__image"
-            />
-            <div class="cards__place-container">
-              <h2 class="cards__place-text">Гора Эльбрус</h2>
-              <button
-                type="button"
-                name="like"
-                class="cards__button-like"
-              ></button>
-            </div>
-          </div>
-          <div class="cards__item">
-            <img src="./images/Dombay.jpg" alt="Домбай" class="cards__image" />
-            <div class="cards__place-container">
-              <h2 class="cards__place-text">Домбай</h2>
-              <button
-                type="button"
-                name="like"
-                class="cards__button-like"
-              ></button>
-            </div>
-          </div>
-          <div class="cards__item">
-            <img
-              src="./images/Karachaevsk.jpg"
-              alt="Карачаево-Черкессия"
-              class="cards__image"
-            />
-            <div class="cards__place-container">
-              <h2 class="cards__place-text">Карачаево-Черкессия</h2>
-              <button
-                type="button"
-                name="like"
-                class="cards__button-like"
-              ></button>
-            </div>
-          </div>
+          <ul class="cards__items">
+            <li class="cards__item">
+              <img
+                src="./images/Karachaevsk.jpg"
+                alt="Карачаевск"
+                class="cards__image"
+              />
+              <div class="cards__place-container">
+                <h2 class="cards__place-text">Карачаевск</h2>
+                <button
+                  type="button"
+                  name="like"
+                  class="cards__button-like"
+                ></button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                src="./images/elbrus.jpg"
+                alt="Гора Эльбрус"
+                class="cards__image"
+              />
+              <div class="cards__place-container">
+                <h2 class="cards__place-text">Гора Эльбрус</h2>
+                <button
+                  type="button"
+                  name="like"
+                  class="cards__button-like"
+                ></button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                src="./images/Dombay.jpg"
+                alt="Домбай"
+                class="cards__image"
+              />
+              <div class="cards__place-container">
+                <h2 class="cards__place-text">Домбай</h2>
+                <button
+                  type="button"
+                  name="like"
+                  class="cards__button-like"
+                ></button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                src="./images/elbrus.jpg"
+                alt="Гора Эльбрус"
+                class="cards__image"
+              />
+              <div class="cards__place-container">
+                <h2 class="cards__place-text">Гора Эльбрус</h2>
+                <button
+                  type="button"
+                  name="like"
+                  class="cards__button-like"
+                ></button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                src="./images/Dombay.jpg"
+                alt="Домбай"
+                class="cards__image"
+              />
+              <div class="cards__place-container">
+                <h2 class="cards__place-text">Домбай</h2>
+                <button
+                  type="button"
+                  name="like"
+                  class="cards__button-like"
+                ></button>
+              </div>
+            </li>
+            <li class="cards__item">
+              <img
+                src="./images/Karachaevsk.jpg"
+                alt="Карачаево-Черкессия"
+                class="cards__image"
+              />
+              <div class="cards__place-container">
+                <h2 class="cards__place-text">Карачаево-Черкессия</h2>
+                <button
+                  type="button"
+                  name="like"
+                  class="cards__button-like"
+                ></button>
+              </div>
+            </li>
+          </ul>
         </section>
         <section class="popup">
-          <div class="popup__container">
+          <form name="user-info" class="popup__container">
             <div class="popup__info">
               <h2 class="popup__heading">Редактировать профиль</h2>
               <input
+                name="user-name"
                 type="text"
-                class="popup__name"
+                class="popup__user-info"
                 id="name"
-                placeholder="Жак-Ив Кусто"
+                placeholder="Как Вас зовут?"
+                value="Жак-Ив Кусто"
               />
               <input
+                name="user-work"
                 type="text"
-                class="popup__work"
+                class="popup__user-info"
                 id="work"
-                placeholder="Исследователь океана"
+                placeholder="Кем вы работаете?"
+                value="Исследователь океана"
               />
               <button type="submit" class="popup__button-save">
                 Сохранить
@@ -147,7 +161,7 @@
               name="close"
               class="popup__button-close"
             ></button>
-          </div>
+          </form>
         </section>
       </main>
       <footer class="footer">

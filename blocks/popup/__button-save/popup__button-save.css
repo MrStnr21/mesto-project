@@ -2,7 +2,7 @@
     margin: 0 0 37px 0;
     padding: 0;
     width: 358px;
-    height: 50px;
+    min-height: 50px;
     color: white;
     background-color: black;
     border: none;
@@ -11,14 +11,15 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center; 
+    transition: .2s ease-out;
+    cursor: pointer;
 }
 
 .popup__button-save:hover {
     opacity: .8;
-    transition: .2s;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 767px) {
     .popup__button-save {
         width: 238px;
         height: 46px;

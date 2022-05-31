@@ -6,9 +6,10 @@
     border: 0;
     background-image: url(../../../images/like_disabled.svg);
     background-color: white;
+    transition: .2s ease-out;
+    cursor: pointer;
 }
 
 .cards__button-like:hover {
     opacity: .5;
-    transition: .2s;
 }
