@@ -39,98 +39,7 @@
           <button type="button" name="add" class="profile__button-add"></button>
         </section>
         <section class="cards">
-          <ul class="cards__items">
-            <li class="cards__item">
-              <img
-                src="./images/Karachaevsk.jpg"
-                alt="Карачаевск"
-                class="cards__image"
-              />
-              <div class="cards__place-container">
-                <h2 class="cards__place-text">Карачаевск</h2>
-                <button
-                  type="button"
-                  name="like"
-                  class="cards__button-like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__item">
-              <img
-                src="./images/elbrus.jpg"
-                alt="Гора Эльбрус"
-                class="cards__image"
-              />
-              <div class="cards__place-container">
-                <h2 class="cards__place-text">Гора Эльбрус</h2>
-                <button
-                  type="button"
-                  name="like"
-                  class="cards__button-like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__item">
-              <img
-                src="./images/Dombay.jpg"
-                alt="Домбай"
-                class="cards__image"
-              />
-              <div class="cards__place-container">
-                <h2 class="cards__place-text">Домбай</h2>
-                <button
-                  type="button"
-                  name="like"
-                  class="cards__button-like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__item">
-              <img
-                src="./images/elbrus.jpg"
-                alt="Гора Эльбрус"
-                class="cards__image"
-              />
-              <div class="cards__place-container">
-                <h2 class="cards__place-text">Гора Эльбрус</h2>
-                <button
-                  type="button"
-                  name="like"
-                  class="cards__button-like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__item">
-              <img
-                src="./images/Dombay.jpg"
-                alt="Домбай"
-                class="cards__image"
-              />
-              <div class="cards__place-container">
-                <h2 class="cards__place-text">Домбай</h2>
-                <button
-                  type="button"
-                  name="like"
-                  class="cards__button-like"
-                ></button>
-              </div>
-            </li>
-            <li class="cards__item">
-              <img
-                src="./images/Karachaevsk.jpg"
-                alt="Карачаево-Черкессия"
-                class="cards__image"
-              />
-              <div class="cards__place-container">
-                <h2 class="cards__place-text">Карачаево-Черкессия</h2>
-                <button
-                  type="button"
-                  name="like"
-                  class="cards__button-like"
-                ></button>
-              </div>
-            </li>
-          </ul>
+          <ul class="cards__items"></ul>
         </section>
         <section class="popup">
           <form name="user-info" class="popup__container">
@@ -168,5 +77,15 @@
         <p class="footer__copyright">© 2022 Потрапелюк Ярослав</p>
       </footer>
     </div>
+    <template id="card-template">
+      <li class="cards__item">
+        <img src="#" alt="картинка" class="cards__image" />
+        <div class="cards__place-container">
+          <h2 class="cards__place-text"></h2>
+          <button type="button" name="like" class="cards__button-like"></button>
+        </div>
+      </li>
+      </template>
+    <script src="./script/script.js"></script>
   </body>
 </html>
