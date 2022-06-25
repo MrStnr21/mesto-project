@@ -29,19 +29,25 @@
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <button
                   type="button"
-                  name="edit"
+                  name="button-user-info-edit"
                   class="profile__button-edit"
                 ></button>
               </div>
               <p class="profile__work">Исследователь океана</p>
             </div>
           </div>
-          <button type="button" name="add" class="profile__button-add"></button>
+          <button
+            type="button"
+            name="button-place-add"
+            class="profile__button-add"
+          ></button>
         </section>
         <section class="cards">
-          <ul class="cards__items"></ul>
+          <ul class="cards__items">
+            <!-- Контейнер для карточек пользователя-->
+          </ul>
         </section>
-        <section class="popup">
+        <section class="popup popup-user-info">
           <form name="user-info" class="popup__container">
             <div class="popup__info">
               <h2 class="popup__heading">Редактировать профиль</h2>
@@ -61,13 +67,42 @@
                 placeholder="Кем вы работаете?"
                 value="Исследователь океана"
               />
-              <button type="submit" class="popup__button-save">
+              <button name="save" type="submit" class="popup__button-save">
                 Сохранить
               </button>
             </div>
             <button
               type="button"
-              name="close"
+              name="close-user-info"
+              class="popup__button-close"
+            ></button>
+          </form>
+        </section>
+        <section class="popup popup-place-add">
+          <form name="place-add" class="popup__container">
+            <div class="popup__info">
+              <h2 class="popup__heading">Новое место</h2>
+              <input
+                name="place-name"
+                type="text"
+                class="popup__place-info"
+                id="place-name"
+                placeholder="Название места"
+                value=""
+              />
+              <input
+                name="place-link"
+                type="url"
+                class="popup__place-info"
+                id="place-link"
+                placeholder="Ссылка на картинку"
+                value=""
+              />
+              <button name="place-add" type="submit" class="popup__button-save">Создать</button>
+            </div>
+            <button
+              type="button"
+              name="close-place-add"
               class="popup__button-close"
             ></button>
           </form>
@@ -85,7 +120,7 @@
           <button type="button" name="like" class="cards__button-like"></button>
         </div>
       </li>
-      </template>
+    </template>
     <script src="./script/script.js"></script>
   </body>
 </html>
