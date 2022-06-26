@@ -124,4 +124,5 @@ function addCard(evt) {
 
 submitButtonPlace.addEventListener("submit", addCard);
 
+// функция удаления карточки 
 

@@ -98,7 +98,9 @@
                 placeholder="Ссылка на картинку"
                 value=""
               />
-              <button name="place-add" type="submit" class="popup__button-save">Создать</button>
+              <button name="place-add" type="submit" class="popup__button-save">
+                Создать
+              </button>
             </div>
             <button
               type="button"
@@ -115,6 +117,11 @@
     <template id="card-template">
       <li class="cards__item">
         <img src="#" alt="картинка" class="cards__image" />
+        <button
+        type="button"
+        name="delete-card"
+        class="cards__button-delete"
+      ></button>
         <div class="cards__place-container">
           <h2 class="cards__place-text"></h2>
           <button type="button" name="like" class="cards__button-like"></button>
