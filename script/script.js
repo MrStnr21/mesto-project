@@ -81,8 +81,9 @@ const initialCards = [
   },
 ];
 
-const cardsList = document.querySelector(".cards__items");
+const cardsList = document.querySelector(".cards__items"); 
 const cardTemplate = document.querySelector("#card-template").content;
+
 
 //функция добавления 6 карточек на страницу
 
@@ -102,27 +103,30 @@ const submitButtonPlace = document.querySelector('[name="place-add"]');
 
 //функция добавления пользовательской карточки на страницу
 
-function addCard(evt) {
+const placeAddForm = document.querySelector('[name="place-add"]')
+
+const createCard = function (evt) {
   evt.preventDefault();
 
-  const imgPlace = document.querySelector('[name="place-link"]');
-  const namePlace = document.querySelector('[name="place-name"]');
+  const cardElement = cardTemplate.cloneNode(true);
 
-  cardsContainer.insertAdjacentHTML(
-    "afterbegin",
-    `<li class="cards__item">
-  <img src="${imgPlace.value}" alt="картинка" class="cards__image" />
-  <div class="cards__place-container">
-    <h2 class="cards__place-text">${namePlace.value}</h2>
-    <button type="button" name="like" class="cards__button-like"></button>
-  </div>
-</li>`
-  );
+  const imagePlace = cardElement.querySelector(".cards__image");
+  const namePlace = cardElement.querySelector(".cards__place-text");
+
+  const placeNameInput = document.querySelector('[name="place-name"]');
+  const placeImageInput = document.querySelector('[name="place-link"]');
+
+  imagePlace.src = placeImageInput.value;
+  namePlace.textContent = placeNameInput.value;
+
+  cardsList.prepend(cardElement);
 
   popupPlaceAdd.classList.remove("popup_opened");
-}
+  }
 
-submitButtonPlace.addEventListener("submit", addCard);
+  placeAddForm.addEventListener('submit', createCard);
 
 // функция удаления карточки 
+
+
 
