@@ -2,8 +2,12 @@
 
 const buttonEditProfile = document.querySelector(".profile__button-edit");
 const buttonAddPlace = document.querySelector(".profile__button-add");
-const popupUserInfo = document.querySelector(".popup-user-info");
-const popupPlaceAdd = document.querySelector(".popup-place-add");
+const popupUserInfo = document.querySelector(".popup__user-info");
+const popupPlaceAdd = document.querySelector(".popup__place-add");
+const popupFullSizeImage = document.querySelector(".popup__fullsize-image");
+const buttonClosePopupFullSizeImage = document.querySelector(
+  '[name="close-fullsize-image"]'
+);
 const buttonCloseUserInfo = document.querySelector('[name="close-user-info"]');
 const buttonClosePlacePopup = document.querySelector(
   '[name="close-place-add"]'
@@ -96,12 +100,14 @@ initialCards.forEach(function (element) {
     .querySelector(".cards__button-like")
     .addEventListener("click", function (evt) {
       evt.target.classList.toggle("cards__button-like_active");
-    });
+    }); // функция лайка карточек
 
-  cardElement.querySelector(".cards__button-delete").addEventListener("click", function (evt) {
-    const card = evt.target.closest('.cards__item');
-    card.remove()
-  })
+  cardElement
+    .querySelector(".cards__button-delete")
+    .addEventListener("click", function (evt) {
+      const card = evt.target.closest(".cards__item");
+      card.remove(); // функция удаления карточек
+    });
 
   cardsList.append(cardElement);
 });
@@ -129,16 +135,18 @@ const createCard = function (evt) {
   imagePlace.src = placeImageInput.value;
   namePlace.textContent = placeNameInput.value;
 
-  cardElement.querySelector(".cards__button-delete").addEventListener("click", function (evt) {
-    const card = evt.target.closest('.cards__item');
-    card.remove()
-  }); // функция удаления карточек
-
   cardElement
     .querySelector(".cards__button-like")
     .addEventListener("click", function (evt) {
       evt.target.classList.toggle("cards__button-like_active");
     }); // функция лайка карточек
+
+  cardElement
+    .querySelector(".cards__button-delete")
+    .addEventListener("click", function (evt) {
+      const card = evt.target.closest(".cards__item");
+      card.remove();
+    }); // функция удаления карточек
 
   cardsList.prepend(cardElement);
 
