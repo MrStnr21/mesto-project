@@ -81,9 +81,8 @@ const initialCards = [
   },
 ];
 
-const cardsList = document.querySelector(".cards__items"); 
+const cardsList = document.querySelector(".cards__items");
 const cardTemplate = document.querySelector("#card-template").content;
-
 
 //функция добавления 6 карточек на страницу
 
@@ -92,6 +91,17 @@ initialCards.forEach(function (element) {
 
   cardElement.querySelector(".cards__image").src = element.link;
   cardElement.querySelector(".cards__place-text").textContent = element.name;
+
+  cardElement
+    .querySelector(".cards__button-like")
+    .addEventListener("click", function (evt) {
+      evt.target.classList.toggle("cards__button-like_active");
+    });
+
+  cardElement.querySelector(".cards__button-delete").addEventListener("click", function (evt) {
+    const card = evt.target.closest('.cards__item');
+    card.remove()
+  })
 
   cardsList.append(cardElement);
 });
@@ -103,7 +113,7 @@ const submitButtonPlace = document.querySelector('[name="place-add"]');
 
 //функция добавления пользовательской карточки на страницу
 
-const placeAddForm = document.querySelector('[name="place-add"]')
+const placeAddForm = document.querySelector('[name="place-add"]');
 
 const createCard = function (evt) {
   evt.preventDefault();
@@ -119,14 +129,20 @@ const createCard = function (evt) {
   imagePlace.src = placeImageInput.value;
   namePlace.textContent = placeNameInput.value;
 
+  cardElement.querySelector(".cards__button-delete").addEventListener("click", function (evt) {
+    const card = evt.target.closest('.cards__item');
+    card.remove()
+  }); // функция удаления карточек
+
+  cardElement
+    .querySelector(".cards__button-like")
+    .addEventListener("click", function (evt) {
+      evt.target.classList.toggle("cards__button-like_active");
+    }); // функция лайка карточек
+
   cardsList.prepend(cardElement);
 
   popupPlaceAdd.classList.remove("popup_opened");
-  }
+};
 
-  placeAddForm.addEventListener('submit', createCard);
-
-// функция удаления карточки 
-
-
-
+placeAddForm.addEventListener("submit", createCard);
