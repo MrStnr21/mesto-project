@@ -95,6 +95,7 @@ initialCards.forEach(function (element) {
 
   cardElement.querySelector(".cards__image").src = element.link;
   cardElement.querySelector(".cards__place-text").textContent = element.name;
+  cardElement.querySelector(".cards__image").alt = element.name;
 
   cardElement
     .querySelector(".cards__button-like")
@@ -109,8 +110,21 @@ initialCards.forEach(function (element) {
       card.remove(); // функция удаления карточек
     });
 
+    const bigImage = document.querySelector('.popup__image');
+    const captionImage = document.querySelector('.popup__caption');
+
+    bigImage.src = element.link;
+    captionImage.textContent = element.name;
+
+    cardElement
+    .querySelector(".cards__image")
+    .addEventListener("click", function (evt) {
+      popupFullSizeImage.classList.add("popup_opened");
+    });
+
   cardsList.append(cardElement);
 });
+
 
 //объявление перменных для добавления пользовательской карточкм на страницу
 
@@ -128,12 +142,14 @@ const createCard = function (evt) {
 
   const imagePlace = cardElement.querySelector(".cards__image");
   const namePlace = cardElement.querySelector(".cards__place-text");
+  const altPlace = cardElement.querySelector(".cards__image");
 
   const placeNameInput = document.querySelector('[name="place-name"]');
   const placeImageInput = document.querySelector('[name="place-link"]');
 
   imagePlace.src = placeImageInput.value;
   namePlace.textContent = placeNameInput.value;
+  altPlace.alt = placeNameInput.value;
 
   cardElement
     .querySelector(".cards__button-like")
