@@ -92,8 +92,15 @@ const initialCards = [
   },
 ];
 
+// объявление переменных для работы с шаблоном карточек
+
 const cardsList = document.querySelector(".cards__items");
 const cardTemplate = document.querySelector("#card-template").content;
+
+// объявление переменных для открытия попапа с картинкой
+
+const fullSizeImage = document.querySelector(".popup__image");
+const captionImage = document.querySelector(".popup__caption");
 
 //функция добавления 6 карточек на страницу
 
@@ -114,14 +121,8 @@ initialCards.forEach(function (element) {
     .querySelector(".cards__button-delete")
     .addEventListener("click", function (evt) {
       const card = evt.target.closest(".cards__item");
-      card.remove(); // функция удаления карточек
-    });
-
-  const fullSizeImage = document.querySelector(".popup__image");
-  const captionImage = document.querySelector(".popup__caption");
-
-  fullSizeImage.src = element.link;
-  captionImage.textContent = element.name;
+      card.remove();
+    }); // функция удаления карточек
 
   cardElement
     .querySelector(".cards__image")
@@ -129,19 +130,20 @@ initialCards.forEach(function (element) {
       fullSizeImage.src = element.link;
       captionImage.textContent = element.name;
       popupFullSizeImage.classList.add("popup_opened");
-    });
+    }); // функция открытия попапа с картинкой
 
   cardsList.append(cardElement);
 });
 
-//объявление перменных для добавления пользовательской карточкм на страницу
+//объявление перменных для добавления пользовательской карточки на страницу
 
 const cardsContainer = document.querySelector(".cards__items");
 const submitButtonPlace = document.querySelector('[name="place-add"]');
+const placeAddForm = document.querySelector('[name="place-add"]');
+const placeNameInput = document.querySelector('[name="place-name"]');
+const placeImageInput = document.querySelector('[name="place-link"]');
 
 //функция добавления пользовательской карточки на страницу
-
-const placeAddForm = document.querySelector('[name="place-add"]');
 
 const createCard = function (evt) {
   evt.preventDefault();
@@ -151,9 +153,6 @@ const createCard = function (evt) {
   const imagePlace = cardElement.querySelector(".cards__image");
   const namePlace = cardElement.querySelector(".cards__place-text");
   const altPlace = cardElement.querySelector(".cards__image");
-
-  const placeNameInput = document.querySelector('[name="place-name"]');
-  const placeImageInput = document.querySelector('[name="place-link"]');
 
   imagePlace.src = placeImageInput.value;
   namePlace.textContent = placeNameInput.value;
@@ -172,24 +171,17 @@ const createCard = function (evt) {
       card.remove();
     }); // функция удаления карточек
 
-  const fullSizeImage = document.querySelector(".popup__image");
-  const captionImage = document.querySelector(".popup__caption");
-
-  fullSizeImage.src = placeImageInput.value;
-  captionImage.textContent = placeNameInput.value;
-
   cardElement
     .querySelector(".cards__image")
     .addEventListener("click", function (evt) {
       fullSizeImage.src = placeImageInput.value;
       captionImage.textContent = placeNameInput.value;
       popupFullSizeImage.classList.add("popup_opened");
-    });
+    }); // функция открытия попапа с картинкой
 
   cardsList.prepend(cardElement);
 
   popupPlaceAdd.classList.remove("popup_opened");
-  
 };
 
 placeAddForm.addEventListener("submit", createCard);
