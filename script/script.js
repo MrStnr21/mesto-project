@@ -1,4 +1,4 @@
-//объявление переменны для работы с попапами(open/close/edit/add)
+// объявление переменны для работы с попапами(open/close/edit/add)
 
 const buttonEditProfile = document.querySelector(".profile__button-edit");
 const buttonAddPlace = document.querySelector(".profile__button-add");
@@ -13,7 +13,7 @@ const buttonClosePlacePopup = document.querySelector(
   '[name="close-place-add"]'
 );
 
-//функции открытия/закрытия попапов
+// функции открытия/закрытия попапов
 
 buttonAddPlace.addEventListener("click", function (popupOpenedClosed) {
   popupPlaceAdd.classList.add("popup_opened");
@@ -38,13 +38,13 @@ buttonCloseFullSizeImage.addEventListener(
   }
 );
 
-//объявление переменных для формы "Редактировать профиль"
+// объявление переменных для формы "Редактировать профиль"
 
 const formUserInfoElement = document.querySelector('[name="user-info"]');
 const userNameInput = document.querySelector("#name");
 const UserWorkInput = document.querySelector("#work");
 
-//функция редактирования профиля
+// функция редактирования профиля
 
 function formSubmitHandler(event) {
   event.preventDefault();
@@ -63,7 +63,7 @@ function formSubmitHandler(event) {
 
 formUserInfoElement.addEventListener("submit", formSubmitHandler);
 
-//объявление переменных для 6 карточек
+// объявление переменных для 6 карточек
 
 const initialCards = [
   {
@@ -102,7 +102,7 @@ const cardTemplate = document.querySelector("#card-template").content;
 const fullSizeImage = document.querySelector(".popup__image");
 const captionImage = document.querySelector(".popup__caption");
 
-//функция добавления 6 карточек на страницу
+// функция добавления 6 карточек на страницу
 
 initialCards.forEach(function (element) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -135,7 +135,7 @@ initialCards.forEach(function (element) {
   cardsList.append(cardElement);
 });
 
-//объявление перменных для добавления пользовательской карточки на страницу
+// объявление перменных для добавления пользовательской карточки на страницу
 
 const cardsContainer = document.querySelector(".cards__items");
 const submitButtonPlace = document.querySelector('[name="place-add"]');
@@ -143,7 +143,7 @@ const placeAddForm = document.querySelector('[name="place-add"]');
 const placeNameInput = document.querySelector('[name="place-name"]');
 const placeImageInput = document.querySelector('[name="place-link"]');
 
-//функция добавления пользовательской карточки на страницу
+// функция добавления пользовательской карточки на страницу
 
 const createCard = function (evt) {
   evt.preventDefault();
