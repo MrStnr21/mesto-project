@@ -5,7 +5,7 @@ const buttonAddPlace = document.querySelector(".profile__button-add");
 const popupUserInfo = document.querySelector(".popup__user-info");
 const popupPlaceAdd = document.querySelector(".popup__place-add");
 const popupFullSizeImage = document.querySelector(".popup__fullsize-image");
-const buttonClosePopupFullSizeImage = document.querySelector(
+const buttonCloseFullSizeImage = document.querySelector(
   '[name="close-fullsize-image"]'
 );
 const buttonCloseUserInfo = document.querySelector('[name="close-user-info"]');
@@ -30,6 +30,13 @@ buttonEditProfile.addEventListener("click", function (popupOpenedClosed) {
 buttonCloseUserInfo.addEventListener("click", function (popupOpenedClosed) {
   popupUserInfo.classList.remove("popup_opened");
 });
+
+buttonCloseFullSizeImage.addEventListener(
+  "click",
+  function (popupOpenedClosed) {
+    popupFullSizeImage.classList.remove("popup_opened");
+  }
+);
 
 //объявление переменных для формы "Редактировать профиль"
 
@@ -110,21 +117,22 @@ initialCards.forEach(function (element) {
       card.remove(); // функция удаления карточек
     });
 
-    const bigImage = document.querySelector('.popup__image');
-    const captionImage = document.querySelector('.popup__caption');
+  const fullSizeImage = document.querySelector(".popup__image");
+  const captionImage = document.querySelector(".popup__caption");
 
-    bigImage.src = element.link;
-    captionImage.textContent = element.name;
+  fullSizeImage.src = element.link;
+  captionImage.textContent = element.name;
 
-    cardElement
+  cardElement
     .querySelector(".cards__image")
     .addEventListener("click", function (evt) {
+      fullSizeImage.src = element.link;
+      captionImage.textContent = element.name;
       popupFullSizeImage.classList.add("popup_opened");
     });
 
   cardsList.append(cardElement);
 });
-
 
 //объявление перменных для добавления пользовательской карточкм на страницу
 
@@ -164,9 +172,24 @@ const createCard = function (evt) {
       card.remove();
     }); // функция удаления карточек
 
+  const fullSizeImage = document.querySelector(".popup__image");
+  const captionImage = document.querySelector(".popup__caption");
+
+  fullSizeImage.src = placeImageInput.value;
+  captionImage.textContent = placeNameInput.value;
+
+  cardElement
+    .querySelector(".cards__image")
+    .addEventListener("click", function (evt) {
+      fullSizeImage.src = placeImageInput.value;
+      captionImage.textContent = placeNameInput.value;
+      popupFullSizeImage.classList.add("popup_opened");
+    });
+
   cardsList.prepend(cardElement);
 
   popupPlaceAdd.classList.remove("popup_opened");
+  
 };
 
 placeAddForm.addEventListener("submit", createCard);
