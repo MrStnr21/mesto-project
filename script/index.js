@@ -2,9 +2,9 @@
 
 const buttonEditProfile = document.querySelector(".profile__button-edit");
 const buttonAddPlace = document.querySelector(".profile__button-add");
-const popupUserInfo = document.querySelector(".popup__user-info");
-const popupPlaceAdd = document.querySelector(".popup__place-add");
-const popupFullSizeImage = document.querySelector(".popup__fullsize-image");
+const popupUserInfo = document.querySelector(".popup_user-info");
+const popupPlaceAdd = document.querySelector(".popup_place-add");
+const popupFullSizeImage = document.querySelector(".popup_fullsize-image");
 const buttonCloseFullSizeImage = document.querySelector(
   '[name="close-fullsize-image"]'
 );

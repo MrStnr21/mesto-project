@@ -47,83 +47,90 @@
             <!-- Контейнер для карточек пользователя-->
           </ul>
         </section>
-        <section class="popup popup__user-info">
-          <form name="user-info" class="popup__container">
-            <div class="popup__info">
-              <h2 class="popup__heading">Редактировать профиль</h2>
-              <input
-                name="user-name"
-                type="text"
-                class="popup__user-info"
-                id="name"
-                placeholder="Как Вас зовут?"
-                value=""
-              />
-              <input
-                name="user-work"
-                type="text"
-                class="popup__user-info"
-                id="work"
-                placeholder="Кем вы работаете?"
-                value=""
-              />
-              <button name="save" type="submit" class="popup__button-save">
-                Сохранить
-              </button>
-            </div>
-            <button
-              type="button"
-              name="close-user-info"
-              class="popup__button-close"
-            ></button>
-          </form>
-        </section>
-        <section class="popup popup__place-add">
-          <form name="place-add" class="popup__container">
-            <div class="popup__info">
-              <h2 class="popup__heading">Новое место</h2>
-              <input
-                name="place-name"
-                type="text"
-                class="popup__place-info"
-                id="place-name"
-                placeholder="Название места"
-                value=""
-              />
-              <input
-                name="place-link"
-                type="url"
-                class="popup__place-info"
-                id="place-link"
-                placeholder="Ссылка на картинку"
-                value=""
-              />
-              <button name="place-add" type="submit" class="popup__button-save">
-                Создать
-              </button>
-            </div>
-            <button
-              type="button"
-              name="close-place-add"
-              class="popup__button-close"
-            ></button>
-          </form>
-        </section>
-        <section class="popup popup__fullsize-image">
-          <figure class="popup__image-container">
-            <img src="" alt="" class="popup__image" />
-            <figcaption class="popup__caption"></figcaption>
-            <button
-              type="button"
-              name="close-fullsize-image"
-              class="popup__button-close"
-            ></button>
-          </figure>
-        </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">© 2022 Потрапелюк Ярослав</p>
       </footer>
+      <section class="popup popup_user-info">
+        <div class="popup__container">
+        <form name="user-info" class="popup__form">
+          <div class="popup__info">
+            <h2 class="popup__heading">Редактировать профиль</h2>
+            <input
+              name="user-name"
+              type="text"
+              class="popup__user-info"
+              id="name"
+              placeholder="Как Вас зовут?"
+              value=""
+            />
+            <input
+              name="user-work"
+              type="text"
+              class="popup__user-info"
+              id="work"
+              placeholder="Кем вы работаете?"
+              value=""
+            />
+            <button name="save" type="submit" class="popup__button-save">
+              Сохранить
+            </button>
+          </div>
+          <button
+            type="button"
+            name="close-user-info"
+            class="popup__button-close"
+          ></button>
+        </form>
+      </div>
+      </section>
+      <section class="popup popup_place-add">
+        <div class="popup__container">
+        <form name="place-add" class="popup__form">
+          <div class="popup__info">
+            <h2 class="popup__heading">Новое место</h2>
+            <input
+              name="place-name"
+              type="text"
+              class="popup__place-info"
+              id="place-name"
+              placeholder="Название места"
+              value=""
+            />
+            <input
+              name="place-link"
+              type="url"
+              class="popup__place-info"
+              id="place-link"
+              placeholder="Ссылка на картинку"
+              value=""
+            />
+            <button name="place-add" type="submit" class="popup__button-save">
+              Создать
+            </button>
+          </div>
+          <button
+            type="button"
+            name="close-place-add"
+            class="popup__button-close"
+          ></button>
+          </div>
+        </form>
+      </div>
+      </section>
+      <section class="popup popup_fullsize-image">
+        <div class="popup__image-container">
+          <figure class="popup__figure">
+            <img src="" alt="" class="popup__image" />
+            <figcaption class="popup__caption"></figcaption>
+          </figure>
+          <button
+            type="button"
+            name="close-fullsize-image"
+            class="popup__button-close"
+          ></button>
+        </div>
+      </section>
     </div>
     <template id="card-template">
       <li class="cards__item">
