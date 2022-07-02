@@ -51,74 +51,73 @@
       <footer class="footer">
         <p class="footer__copyright">© 2022 Потрапелюк Ярослав</p>
       </footer>
-      <section class="popup popup_user-info">
+      <section id="popup-user-info" class="popup">
         <div class="popup__container">
-        <form name="user-info" class="popup__form">
-          <div class="popup__info">
-            <h2 class="popup__heading">Редактировать профиль</h2>
-            <input
-              name="user-name"
-              type="text"
-              class="popup__user-info"
-              id="name"
-              placeholder="Как Вас зовут?"
-              value=""
-            />
-            <input
-              name="user-work"
-              type="text"
-              class="popup__user-info"
-              id="work"
-              placeholder="Кем вы работаете?"
-              value=""
-            />
-            <button name="save" type="submit" class="popup__button-save">
-              Сохранить
-            </button>
-          </div>
-          <button
-            type="button"
-            name="close-user-info"
-            class="popup__button-close"
-          ></button>
-        </form>
-      </div>
+          <form name="user-info" class="popup__form">
+            <div class="popup__info">
+              <h2 class="popup__heading">Редактировать профиль</h2>
+              <input
+                name="user-name"
+                type="text"
+                class="popup__user-info"
+                id="name"
+                placeholder="Как Вас зовут?"
+                value=""
+              />
+              <input
+                name="user-work"
+                type="text"
+                class="popup__user-info"
+                id="work"
+                placeholder="Кем вы работаете?"
+                value=""
+              />
+              <button name="save" type="submit" class="popup__button-save">
+                Сохранить
+              </button>
+            </div>
+            <button
+              type="button"
+              name="close-user-info"
+              class="popup__button-close"
+            ></button>
+          </form>
+        </div>
       </section>
-      <section class="popup popup_place-add">
+      <section id="popup-place-add" class="popup">
         <div class="popup__container">
-        <form name="place-add" class="popup__form">
-          <div class="popup__info">
-            <h2 class="popup__heading">Новое место</h2>
-            <input
-              name="place-name"
-              type="text"
-              class="popup__place-info"
-              id="place-name"
-              placeholder="Название места"
-              value=""
-            />
-            <input
-              name="place-link"
-              type="url"
-              class="popup__place-info"
-              id="place-link"
-              placeholder="Ссылка на картинку"
-              value=""
-            />
-            <button name="place-add" type="submit" class="popup__button-save">
-              Создать
-            </button>
-          </div>
-          <button
-            type="button"
-            name="close-place-add"
-            class="popup__button-close"
-          ></button>
-          </div>
-        </form>
-      </div>
+          <form name="place-add" class="popup__form">
+            <div class="popup__info">
+              <h2 class="popup__heading">Новое место</h2>
+              <input
+                name="place-name"
+                type="text"
+                class="popup__place-info"
+                id="place-name"
+                placeholder="Название места"
+                value=""
+              />
+              <input
+                name="place-link"
+                type="url"
+                class="popup__place-info"
+                id="place-link"
+                placeholder="Ссылка на картинку"
+                value=""
+              />
+              <button name="place-add" type="submit" class="popup__button-save">
+                Создать
+              </button>
+            </div>
+            <button
+              type="button"
+              name="close-place-add"
+              class="popup__button-close"
+            ></button>
+          </form>
+        </div>
       </section>
-      <section class="popup popup_fullsize-image">
+      <section id="popup-fullsize-image" class="popup popup_dark-theme">
         <div class="popup__image-container">
           <figure class="popup__figure">
             <img src="" alt="" class="popup__image" />

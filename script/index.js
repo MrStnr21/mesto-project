@@ -2,9 +2,9 @@
 
 const buttonEditProfile = document.querySelector(".profile__button-edit");
 const buttonAddPlace = document.querySelector(".profile__button-add");
-const popupUserInfo = document.querySelector(".popup_user-info");
-const popupPlaceAdd = document.querySelector(".popup_place-add");
-const popupFullSizeImage = document.querySelector(".popup_fullsize-image");
+const popupUserInfo = document.querySelector("#popup-user-info");
+const popupPlaceAdd = document.querySelector("#popup-place-add");
+const popupFullSizeImage = document.querySelector("#popup-fullsize-image");
 const buttonCloseFullSizeImage = document.querySelector(
   '[name="close-fullsize-image"]'
 );
@@ -26,6 +26,8 @@ function closePopup(popupElement) {
 // открытие/закрытие попапов
 
 buttonEditProfile.addEventListener("click", function () {
+  userNameInput.value = profileName.textContent;
+  userWorkInput.value = profileWork.textContent;
   openPopup(popupUserInfo);
 });
 
@@ -54,8 +56,6 @@ const nameInput = userNameInput.value;
 const workInput = userWorkInput.value;
 const profileName = document.querySelector(".profile__name");
 const profileWork = document.querySelector(".profile__work");
-userNameInput.value = profileName.textContent;
-userWorkInput.value = profileWork.textContent;
 
 // функция редактирования профиля
 
@@ -115,7 +115,8 @@ function createCard(link, name) {
     .addEventListener("click", function (evt) {
       fullSizeImage.src = link;
       captionImage.textContent = name;
-      popupFullSizeImage.classList.add("popup_opened");
+      fullSizeImage.alt = name;
+      openPopup(popupFullSizeImage);
     }); // функция открытия попапа с картинкой
 
   return cardElement;
